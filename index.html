@@ -209,7 +209,7 @@
 <body>
   <main>
     <aside>
-      <p class="eyebrow">The Cube</p>
+      <p class="eyebrow" id="releaseBrand">The Cube</p>
       <h2>Release Notes</h2>
       <nav class="versionList" id="versions" aria-label="Versions"></nav>
       <footer>Unofficial Blender utility by Unkredible Studios.</footer>
@@ -226,6 +226,30 @@
     const selectedVersion = versions.includes(params.get("version")) ? params.get("version") : versions[0];
     const versionsNode = document.getElementById("versions");
     const contentNode = document.getElementById("content");
+    const releaseBrandNode = document.getElementById("releaseBrand");
+
+    function compareVersions(left, right) {
+      const leftParts = left.split(".").map((part) => Number.parseInt(part, 10) || 0);
+      const rightParts = right.split(".").map((part) => Number.parseInt(part, 10) || 0);
+      const length = Math.max(leftParts.length, rightParts.length);
+
+      for (let index = 0; index < length; index += 1) {
+        const diff = (leftParts[index] || 0) - (rightParts[index] || 0);
+        if (diff !== 0) return diff;
+      }
+
+      return 0;
+    }
+
+    function appNameForVersion(version) {
+      return compareVersions(version, "1.1.2") <= 0 ? "The Forge" : "The Cube";
+    }
+
+    function updateBrand(version) {
+      const appName = appNameForVersion(version);
+      releaseBrandNode.textContent = appName;
+      document.title = `${appName} Release Notes`;
+    }
 
     function escapeHtml(value) {
       return value
@@ -353,9 +377,11 @@
     });
 
     // Load the selected (most recent) release by default
+    updateBrand(selectedVersion);
     loadRelease(selectedVersion);
 
     function loadRelease(version) {
+      updateBrand(version);
       fetch(`v${version}.md`)
         .then((response) => {
           if (!response.ok) throw new Error('Release note not found');
