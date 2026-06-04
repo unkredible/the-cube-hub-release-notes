@@ -1,6 +1,6 @@
-# The Forge Release Notes
+# The Cube Release Notes
 
-Public release notes for The Forge - versione 1.1.2
+Public release notes for The Cube - versione 1.1.2
 
 **Repository GitHub:** https://github.com/unkredible/the-forge-release-notes
 
@@ -18,7 +18,7 @@ Public release notes for The Forge - versione 1.1.2
 
 **⚠️ REGOLA IMPORTANTE: Ogni versione ha il suo file separato. NON sovrascrivere versioni precedenti.**
 
-Quando rilasci una nuova versione di The Forge:
+Quando rilasci una nuova versione di The Cube:
 
 1. **Crea UN NUOVO file per la versione** (es. `v1.1.1.md`):
    - File deve seguire il formato: `v{major}.{minor}.{patch}.md`
