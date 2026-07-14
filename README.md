@@ -2,15 +2,15 @@
 
 Public release notes for The Cube - versione 1.1.2
 
-**Repository GitHub:** https://github.com/unkredible/the-forge-release-notes
+**Repository GitHub:** https://github.com/unkredible/the-cube-hub-release-notes
 
-**GitHub Pages (URL pubblica):** https://unkredible.github.io/the-forge-release-notes/
+**GitHub Pages (URL pubblica):** https://unkredible.github.io/the-cube-hub-release-notes/
 
 ⚠️ **IMPORTANTE - Restrizioni Release:** Non fare release per macOS e Linux fino a nuova indicazione. Solo Windows è abilitato per il release.
 
 ## Struttura
 
-- Repository locale: `c:\git\the-forge-release-notes`
+- Repository locale: `c:\git\the-cube-hub-release-notes`
 - File versioni: `v1.0.0.md`, `v1.0.1.md`, `v1.1.0.md`, `v1.1.2.md`, etc.
 - File principale: `v1.1.2.md` (versione corrente)
 
@@ -29,7 +29,7 @@ Quando rilasci una nuova versione di The Cube:
 
 2. **Fai commit dei cambiamenti**:
    ```powershell
-   cd c:\git\the-forge-release-notes
+   cd c:\git\the-cube-hub-release-notes
    git add v1.1.1.md
    git commit -m "Add v1.1.1 release notes: [descrizione feature]"
    ```
@@ -39,7 +39,7 @@ Quando rilasci una nuova versione di The Cube:
    git push origin main
    ```
 
-4. Le modifiche appariranno automaticamente su GitHub Pages (https://unkredible.github.io/the-forge-release-notes/)
+4. Le modifiche appariranno automaticamente su GitHub Pages (https://unkredible.github.io/the-cube-hub-release-notes/)
 
 **Esempio:** Se stai aggiornando da 1.1.0 a 1.1.1:
 - v1.1.0.md rimane intatto e inalterato
@@ -47,7 +47,7 @@ Quando rilasci una nuova versione di The Cube:
 
 ## Nota sulla sincronizzazione
 
-Il codice principale è nel repository `the-forge` (https://github.com/unkredible/the-forge), mentre questo repository contiene solo la documentazione pubblica dei release notes. Assicurati di aggiornare ENTRAMBI i repository quando fai un release:
+Il codice principale è nel repository `the-forge` (https://github.com/unkredible/the-cube-hub), mentre questo repository contiene solo la documentazione pubblica dei release notes. Assicurati di aggiornare ENTRAMBI i repository quando fai un release:
 
 1. Fai push del codice su `the-forge`
-2. Aggiorna e fai push dei release notes su `the-forge-release-notes`
+2. Aggiorna e fai push dei release notes su `the-cube-hub-release-notes`
