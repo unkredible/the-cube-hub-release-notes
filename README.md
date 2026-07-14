@@ -47,7 +47,7 @@ Quando rilasci una nuova versione di The Cube:
 
 ## Nota sulla sincronizzazione
 
-Il codice principale è nel repository `the-forge` (https://github.com/unkredible/the-cube-hub), mentre questo repository contiene solo la documentazione pubblica dei release notes. Assicurati di aggiornare ENTRAMBI i repository quando fai un release:
+Il codice principale è nel repository `the-cube-hub` (https://github.com/unkredible/the-cube-hub), mentre questo repository contiene solo la documentazione pubblica dei release notes. Assicurati di aggiornare ENTRAMBI i repository quando fai un release:
 
-1. Fai push del codice su `the-forge`
+1. Fai push del codice su `the-cube-hub`
 2. Aggiorna e fai push dei release notes su `the-cube-hub-release-notes`
